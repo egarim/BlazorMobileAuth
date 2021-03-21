@@ -1,6 +1,7 @@
 ﻿using BlazorMobile.Common;
 using BlazorMobile.Common.Services;
 using BlazorMobileAuth.Blazor.Helpers;
+using BlazorMobileAuth.Blazor.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,9 +18,37 @@ namespace BlazorMobileAuth.Blazor
 
             builder.Services.AddSingleton(new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+
+
+
             #region Services registration
 
             ServicesHelper.ConfigureCommonServices(builder.Services);
+
+
+            builder.Services
+               .AddScoped<IAuthenticationService, AuthenticationService>()
+               .AddScoped<IUserService, UserService>()
+               .AddScoped<IHttpService, HttpService>()
+               .AddScoped<ILocalStorageService, LocalStorageService>();
+
+            // configure http client
+            builder.Services.AddScoped(x =>
+            {
+                var apiUrl = new Uri(builder.Configuration["apiUrl"]);
+
+                // use fake backend if "fakeBackend" is "true" in appsettings.json
+                if (builder.Configuration["fakeBackend"] == "true")
+                    return new HttpClient(new FakeBackendHandler()) { BaseAddress = apiUrl };
+
+                return new HttpClient() { BaseAddress = apiUrl };
+            });
+
+            var host = builder.Build();
+
+            //var authenticationService = host.Services.GetRequiredService<IAuthenticationService>();
+            //await authenticationService.Initialize();
+
 
             #endregion
 

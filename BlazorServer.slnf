@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "BlazorMobileAuth.sln",
+    "projects": [
+      "BlazorMobileAuth.AppPackage\\BlazorMobileAuth.AppPackage.csproj",
+      "BlazorMobileAuth.Blazor.Server\\BlazorMobileAuth.Blazor.Server.csproj",
+      "BlazorMobileAuth.Blazor\\BlazorMobileAuth.Blazor.csproj",
+      "BlazorMobileAuth.Common\\BlazorMobileAuth.Common.csproj",
+      "aspnet-core-3-jwt-authentication-api\\WebApi.csproj",
+      "blazor-webassembly-jwt-authentication-example\\BlazorApp.csproj"
+    ]
+  }
+}

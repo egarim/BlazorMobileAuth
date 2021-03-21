@@ -28,6 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMobileAuth.AppPackage
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthExample", "AuthExample", "{8D735BCB-7139-4689-B57D-00C7280C3D2B}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "aspnet-core-3-jwt-authentication-api\WebApi.csproj", "{01DA2B34-F533-47FA-B36E-352E4D8168EB}"
 EndProject

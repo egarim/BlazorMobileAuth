@@ -1,0 +1,8 @@
+WebAssembly JWT
+https://jasonwatmore.com/post/2020/08/13/blazor-webassembly-jwt-authentication-example-tutorial
+https://github.com/cornflourblue/blazor-webassembly-jwt-authentication-example
+https://jasonwatmore.com/post/2019/10/11/aspnet-core-3-jwt-authentication-tutorial-with-example-api
+
+
+blazor mobile authentication
+https://github.com/Daddoon/BlazorMobile/issues/230
