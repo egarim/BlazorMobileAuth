@@ -26,7 +26,7 @@
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>F2FE0DF008A6F37F90204D68CE22C73D1F2ACDF8</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>4165F3ABDE62FAA5E1963E4F1715F7D08F4819E2</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -159,7 +159,9 @@
     <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.9" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="BlazorMobileAuth.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlazorMobileAuth.AppPackage\BlazorMobileAuth.AppPackage.csproj">
       <Project>{632d1b2f-56e1-4f61-9e05-af9c8477e98b}</Project>

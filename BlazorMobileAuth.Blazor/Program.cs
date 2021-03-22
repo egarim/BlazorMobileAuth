@@ -46,8 +46,8 @@ namespace BlazorMobileAuth.Blazor
 
             var host = builder.Build();
 
-            //var authenticationService = host.Services.GetRequiredService<IAuthenticationService>();
-            //await authenticationService.Initialize();
+            var authenticationService = host.Services.GetRequiredService<IAuthenticationService>();
+            await authenticationService.Initialize();
 
 
             #endregion
